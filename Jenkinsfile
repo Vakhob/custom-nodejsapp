@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push vakhob/nodeapp:latest'
+				sh 'docker push vakhobdevops/nodeapp:latest'
 			}
 		}
 	}
