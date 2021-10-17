@@ -22,10 +22,17 @@ pipeline{
 			}
 		}
 
+        stage('Tag') {
+
+			steps {
+				sh 'docker tag vakhob/nodeapp:latest vakhobdevops/devops14-docker'
+			}
+		}
+
 		stage('Push') {
 
 			steps {
-				sh 'docker push vakhobdevops/nodeapp:latest'
+				sh 'docker push vakhobdevops/devops14-docker'
 			}
 		}
 	}
